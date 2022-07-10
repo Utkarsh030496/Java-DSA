@@ -16,7 +16,7 @@ class MyThread1 extends Thread{
 		d=data;
 	}
 	public void run() {
-		d.display("Hello World");
+		d.display("Hello World ");
 	}
 }
 
@@ -26,12 +26,12 @@ class MyThread2 extends Thread{
 		d=data;
 	}
 	public void run() {
-		d.display("Welcome Home");
+		d.display("Welcome Home ");
 	}
 }
 
 class MyData {
-	void display(String s) {
+	synchronized void display(String s) {
 		for(int i=0;i<s.length();i++) {
 			System.out.println(s.charAt(i));
 		}
